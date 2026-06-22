@@ -82,11 +82,11 @@ app.use((err, req, res, next) => {
 });
 
 // ── Iniciar o servidor ───────────────────────────────────────
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`
 ╔══════════════════════════════════════════╗
 ║   🚲 Backend Ciclovias Recife            ║
-║   Rodando em: http://192.168.0.3     ║
+║   Rodando em: http://localhost:${PORT}     ║
 ║   Ambiente: ${process.env.NODE_ENV || 'development'}              ║
 ╚══════════════════════════════════════════╝
   `);
