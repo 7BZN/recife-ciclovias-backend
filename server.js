@@ -21,6 +21,8 @@ const locationRoutes            = require('./routes/locationRoutes');
 const app  = express();
 const PORT = process.env.PORT || 3000;
 
+const cicloviasRoutes = require('./routes/cicloviasRoutes');
+
 // ── Middlewares globais ──────────────────────────────────────
 
 // helmet: adiciona headers de segurança HTTP automaticamente
@@ -48,6 +50,7 @@ inicializarBancoDados();
 // ── Rotas da API ─────────────────────────────────────────────
 // Prefixo /locations para todos os endpoints de localização
 app.use('/locations', locationRoutes);
+app.use('/ciclovias', cicloviasRoutes);
 
 // ── Rota de saúde (health check) ────────────────────────────
 // Útil para verificar se o servidor está rodando

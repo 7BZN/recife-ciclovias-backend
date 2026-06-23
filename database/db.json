@@ -1,4 +1,25 @@
 {
-  "locations": [],
-  "nextId": 2
+  "locations": [
+    {
+      "id": 2,
+      "latitude": -8.2975047,
+      "longitude": -35.0565924,
+      "cicloviaId": "2",
+      "tipo": "CICLORROTA",
+      "bairro": "Brasilia Teimosa, Pina",
+      "extensaoKm": null,
+      "criadoEm": "2026-06-23 21:30:22"
+    },
+    {
+      "id": 3,
+      "latitude": -8.2975156,
+      "longitude": -35.0566065,
+      "cicloviaId": "1",
+      "tipo": "CICLOVIA",
+      "bairro": "Boa Viagem, Pina",
+      "extensaoKm": null,
+      "criadoEm": "2026-06-23 21:30:52"
+    }
+  ],
+  "nextId": 5
 }

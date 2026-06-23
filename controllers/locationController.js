@@ -27,19 +27,22 @@ const locationController = {
   //   400 Bad Request — dados inválidos
   //   500 Internal Server Error — erro inesperado
   // ============================================================
-  async criar(req, res) {
-    // Verifica erros da validação (definida no Route)
-    const erros = validationResult(req);
-    if (!erros.isEmpty()) {
-      return res.status(400).json({
-        sucesso: false,
-        mensagem: 'Dados inválidos',
-        erros: erros.array().map((e) => ({
-          campo: e.path,
-          mensagem: e.msg,
-        })),
-      });
-    }
+ async criar(req, res) {
+  // LOG TEMPORÁRIO
+  console.log('BODY RECEBIDO:', JSON.stringify(req.body, null, 2));
+  
+  const erros = validationResult(req);
+  if (!erros.isEmpty()) {
+    console.log('ERROS DE VALIDAÇÃO:', JSON.stringify(erros.array(), null, 2));
+    return res.status(400).json({
+      sucesso: false,
+      mensagem: 'Dados inválidos',
+      erros: erros.array().map((e) => ({
+        campo: e.path,
+        mensagem: e.msg,
+      })),
+    });
+  }
 
     try {
       const registro = await locationService.salvar(req.body);

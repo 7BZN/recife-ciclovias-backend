@@ -37,9 +37,10 @@ const validacoesCriar = [
 
   // tipo: opcional, mas se informado deve ser um dos tipos válidos
   body('tipo')
-    .optional()
-    .isIn(['CICLOVIA', 'CICLOFAIXA', 'CICLORROTA', 'ciclovia', 'ciclofaixa', 'ciclorrota'])
-    .withMessage('tipo deve ser CICLOVIA, CICLOFAIXA ou CICLORROTA'),
+  .optional()
+  .customSanitizer((value) => value?.toUpperCase())
+  .isIn(['CICLOVIA', 'CICLOFAIXA', 'CICLORROTA', 'N/D'])
+  .withMessage('tipo deve ser CICLOVIA, CICLOFAIXA ou CICLORROTA'),
 
   // bairro: opcional, string
   body('bairro')
@@ -50,9 +51,9 @@ const validacoesCriar = [
 
   // extensaoKm: opcional, número positivo
   body('extensaoKm')
-    .optional()
-    .isFloat({ min: 0 })
-    .withMessage('extensaoKm deve ser um número positivo'),
+  .optional({ nullable: true })
+  .custom((value) => value === null || value === undefined || (typeof value === 'number' && value >= 0))
+  .withMessage('extensaoKm deve ser um número positivo'),
 ];
 
 // ── Definição das rotas ──────────────────────────────────────
