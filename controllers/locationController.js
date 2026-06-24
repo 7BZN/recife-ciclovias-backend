@@ -28,7 +28,6 @@ const locationController = {
   //   500 Internal Server Error — erro inesperado
   // ============================================================
  async criar(req, res) {
-  // LOG TEMPORÁRIO
   console.log('BODY RECEBIDO:', JSON.stringify(req.body, null, 2));
   
   const erros = validationResult(req);

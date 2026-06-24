@@ -19,7 +19,27 @@
       "bairro": "Boa Viagem, Pina",
       "extensaoKm": null,
       "criadoEm": "2026-06-23 21:30:52"
+    },
+    {
+      "id": 5,
+      "latitude": -8.2975186,
+      "longitude": -35.0566043,
+      "cicloviaId": "11",
+      "tipo": "CICLORROTA",
+      "bairro": "Afogados, Mangueira, Mustardinha, San Martin",
+      "extensaoKm": null,
+      "criadoEm": "2026-06-24 06:57:18"
+    },
+    {
+      "id": 8,
+      "latitude": -8.2975032,
+      "longitude": -35.0565897,
+      "cicloviaId": "7",
+      "tipo": "CICLOFAIXA",
+      "bairro": "San Martin, Torroes",
+      "extensaoKm": null,
+      "criadoEm": "2026-06-24 07:04:24"
     }
   ],
-  "nextId": 5
+  "nextId": 9
 }

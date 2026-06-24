@@ -1,12 +1,5 @@
 // ============================================================
 // models/LocationModel.js
-//
-// Modelo de dados para o recurso "locations".
-// Encapsula todas as operações de persistência.
-//
-// Usa o db (database/database.js) como camada de acesso.
-// Em produção, trocar db por better-sqlite3 ou PostgreSQL
-// sem alterar este arquivo.
 // ============================================================
 
 const { db } = require('../database/database');
